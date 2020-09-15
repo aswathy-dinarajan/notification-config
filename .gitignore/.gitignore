@@ -1,5 +1,5 @@
 node_modules/
-assets/
+assets/js/
 dist/
 package-lock.json
 yarn.lock

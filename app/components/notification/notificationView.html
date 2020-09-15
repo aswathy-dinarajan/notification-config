@@ -1,0 +1,72 @@
+<div ng-controller="notificationController">	
+ <!--  <h1 style="color: crimson;">Notifications</h4> -->
+  <div class="heading"></div>
+  <form class="form-horizontal" title="Add Notification Details" >
+  <h4 style="color: crimson;">Add Notification Details</h4>
+  <div class=" row form-group">
+    <label class="control-label col-sm-2" for="email">Name:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="email">
+    </div>
+  </div>
+  <div class=" row form-group">
+    <label class="control-label col-sm-2" for="pwd">DOB:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="dob">
+    </div>
+  </div>
+  <div class=" row form-group">
+    <label class="control-label col-sm-2" for="pwd">Message:</label>
+    <div class="col-sm-8">
+      <textarea class="form-control" id="message"></textarea>
+    </div>
+  </div>
+  <div class=" row form-group">
+    <label class="control-label col-sm-2" for="pwd">Mobile:</label>
+    <div class="col-sm-8">
+     <input type="text" class="form-control" id="mobile">
+    </div>
+  </div>
+
+  <div class=" row form-group">
+    <div class="col-sm-2">
+      <input type="button" class="button"  value="Submit">
+    </div>
+  </div>
+</form>
+
+<div class="clear-fix"></div>
+    <div class="search">
+       <h4 style="color: crimson;">Available Notification Details</h4>
+	    <div class=" row form-group">
+		<label class="control-label col-sm-2" for="name">Name:</label>
+		<div class="col-sm-6">
+		<input type="text" class="form-control" id="name">
+		</div>
+		<div class="col-sm-1">
+		<input type="button" class="button"  value="Search">
+		</div>
+		</div>
+		<div class="table-responsive">
+		<table class="table">
+		<thead>
+			<tr>
+			<th>Name</th>
+			<th>DOB</th>
+			<th>Message</th>
+			<th>Mobile</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in notifications">
+		<td>{{ x.name }}</td>
+		<td>{{ x.dob}}</td>
+		<td>{{ x.message}}</td>
+		<td>{{ x.mobile}}</td>
+	       </tr>
+		</tbody>
+		</table>
+		</div>
+	</div>
+
+</div>

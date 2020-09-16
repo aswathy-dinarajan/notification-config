@@ -9,10 +9,12 @@ require('../assets/js/angular-cookies/angular-cookies.min.js');
 require('../assets/js/angular-animate/angular-animate.min.js');
 require('../assets/js/popper.js/dist/popper.min.js');
 require('../assets/js/bootstrap/dist/js/bootstrap.min.js');
+require('../assets/js/angular-ui-grid/ui-grid.min.js');
 
 require('../assets/js/bootstrap/dist/css/bootstrap.min.css');
 require('../assets/css/main.css');
 require('../assets/js/jquery-ui-dist/jquery-ui.min.css');
+require('../assets/js/angular-ui-grid/ui-grid.min.css');
 
 /* import 'bootstrap'; */
 

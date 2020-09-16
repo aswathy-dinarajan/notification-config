@@ -19,7 +19,7 @@ div.search{
 	background-color: antiquewhite ;
 	margin-left: 10%;
 	width: 70%;
-	padding-left: 1%;
+	/* padding-left: 1%; */
 }
 
 div.table-responsive{
@@ -37,5 +37,18 @@ div.heading{
 	background-color: darksalmon;
 	height: 50px;
 }
+.customGrid{
+	height: 300px;
+}
 
+div.ui-grid-top-panel {
+    background-color: bisque;
+}
 
+div.ui-grid-row:nth-child(odd) .ui-grid-cell {
+    background-color: cornsilk
+}
+
+div.ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: blanchedalmond
+}

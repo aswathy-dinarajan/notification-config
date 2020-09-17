@@ -11,10 +11,15 @@ require('../assets/js/popper.js/dist/popper.min.js');
 require('../assets/js/bootstrap/dist/js/bootstrap.min.js');
 require('../assets/js/angular-ui-grid/ui-grid.min.js');
 
+/* require('../assets/js/moment/min/moment-with-locales.js'); */
+require('../assets/js/angular-moment-picker/dist/angular-moment-picker.min.js');
+
+
 require('../assets/js/bootstrap/dist/css/bootstrap.min.css');
-require('../assets/css/main.css');
+require('./shared/css/main.css');
 require('../assets/js/jquery-ui-dist/jquery-ui.min.css');
 require('../assets/js/angular-ui-grid/ui-grid.min.css');
+require('../assets/js/angular-moment-picker/dist/angular-moment-picker.min.css');
 
 /* import 'bootstrap'; */
 

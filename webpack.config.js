@@ -48,7 +48,8 @@ module.exports = {
             patterns: [
                 { from: './app/**/*.html', to: './' },
                 { from: './assets/js/jquery/dist/jquery.min.js', to: './assets/js/jquery/dist/' },
-                { from: './assets/js/jquery-ui-dist/jquery-ui.min.js', to: './assets/js/jquery-ui-dist/' }
+                { from: './assets/js/jquery-ui-dist/jquery-ui.min.js', to: './assets/js/jquery-ui-dist/' },
+                { from: './assets/js/moment/min/moment-with-locales.js', to: './assets/js/moment/min/' }
             ],
         }),
         new MiniCssExtractPlugin({

@@ -6,31 +6,31 @@
   <div class=" row form-group">
     <label class="control-label col-sm-2" for="email">Name:</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control" id="email">
+      <input type="text" class="form-control" id="name" ng-model="createJson.name">
     </div>
   </div>
   <div class=" row form-group">
     <label class="control-label col-sm-2" for="pwd">DOB:</label>
     <div class="col-sm-8">
-      <input datepicker type="text" class="form-control" id="dob" ng-model="dob">
+      <input datepicker type="text" class="form-control" id="dob" ng-model="createJson.dob">
     </div>
   </div>
   <div class=" row form-group">
     <label class="control-label col-sm-2" for="pwd">Message:</label>
     <div class="col-sm-8">
-      <textarea class="form-control" id="message"></textarea>
+      <textarea class="form-control" id="message" ng-model="createJson.message"></textarea>
     </div>
   </div>
   <div class=" row form-group">
     <label class="control-label col-sm-2" for="pwd">Mobile:</label>
     <div class="col-sm-8">
-     <input type="text" class="form-control" id="mobile">
+     <input type="text" class="form-control" id="mobile" ng-model="createJson.mobile">
     </div>
   </div>
 
   <div class=" row form-group">
     <div class="col-sm-2">
-      <input type="button" class="button"  value="Submit">
+      <input type="button" class="button"  value="Submit" ng-click="saveNotificationConfig()">
     </div>
   </div>
 </form>
@@ -72,8 +72,18 @@
   <div class="clear-fix"></div>
   <div class="search">
     <h4 style="color: crimson;">Available Notification Details</h4>
+    <div class=" row form-group" style="padding-left: 1%;">
+		<label class="control-label col-sm-2" for="name">Name:</label>
+		<div class="col-sm-3">
+		<input type="text" class="form-control" id="name" ng-model="searchJson.name">
+		</div>
+		<div class="col-sm-1">
+		<input type="button" class="button"  value="Search" ng-click="search()">
+		</div>
+		</div>
+
      <div ui-grid="gridOptions" ui-grid-pagination class="customGrid"></div>
   </div>
-
-
+<div class="clear-fix"></div>
+<div class="heading"></div>
 </div>

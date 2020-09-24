@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.9.6",
     "angular-mocks": "^1.7.5",
     "angular-ui-grid": "^4.8.5",
+    "aws-sdk": "^2.758.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-angularjs-annotate": "^0.10.0",
     "copy-webpack-plugin": "^6.0.1",

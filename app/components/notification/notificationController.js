@@ -1,5 +1,20 @@
 const app = angular.module("myApp");
 app.controller('notificationController', function ($scope,notificationService) {
+const AWS = require('aws-sdk');
+//require('aws-sdk/clients/ssm');
+/* require('dotenv').config(); */
+const ssm = new AWS.SSM({region : "us-west-2",
+accessKeyId : "AKIA2GGHLWE4EKB6FAIE",secretAccessKey : "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"
+});
+/* const ssm = new AWS.SSM({region : "us-west-2"
+}); */
+const query = {
+"Name": "/config/notification/notification.domain",
+"WithDecryption": true
+}
+let param = ssm.getParameter(query, function(err, data) {
+$scope.domainname= data.Parameter.Value;
+})
 	$scope.createJson = {};
 	$scope.searchJson = {};
 	$scope.notifications = [{
@@ -61,12 +76,18 @@ gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
 $scope.gridOptions.totalItems  = 20; */
 
 $scope.saveNotificationConfig = function(){
-	notificationService.saveNotificationConfig($scope.createJson);
+	notificationService.saveNotificationConfig($scope.createJson,$scope.domainname).then(
+		   function success(response){
+             alert("Saved Successfully");
+		   },
+		   function error(response){
+            console.log("error"+response);
+		   }
+	   );
 }
 
 $scope.search = function(){
-	console.log('Search-------');
-  notificationService.getNotificationConfig($scope.searchJson,paginationOptions)
+  notificationService.getNotificationConfig($scope.searchJson,paginationOptions,$scope.domainname)
   .then(function success(response){
    $scope.gridOptions.data = response.data.notifications;
    angular.forEach($scope.gridOptions.data,function(item){

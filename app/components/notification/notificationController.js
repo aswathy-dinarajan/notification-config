@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 //require('aws-sdk/clients/ssm');
 /* require('dotenv').config(); */
 const ssm = new AWS.SSM({region : "us-west-2",
-accessKeyId : "AKIA2GGHLWE4EKB6FAIE",secretAccessKey : "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"
+accessKeyId :""
 });
 /* const ssm = new AWS.SSM({region : "us-west-2"
 }); */

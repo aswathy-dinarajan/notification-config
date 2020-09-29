@@ -1,13 +1,9 @@
 const app = angular.module("myApp");
 app.controller('notificationController', function ($scope,notificationService) {
 const AWS = require('aws-sdk');
-//require('aws-sdk/clients/ssm');
-/* require('dotenv').config(); */
 const ssm = new AWS.SSM({region : "us-west-2",
-accessKeyId :""
+accessKeyId :"",secretAccessKey:""
 });
-/* const ssm = new AWS.SSM({region : "us-west-2"
-}); */
 const query = {
 "Name": "/config/notification/notification.domain",
 "WithDecryption": true
@@ -57,6 +53,8 @@ columnDefs: [
 { field: 'dob' },
 { field: 'message' },
 {field: 'mobile'},
+{field: 'email'},
+{field: 'subject'},
 {name: 'Edit',cellTemplate: '<input type="button" class="button"  value="Edit" ng-click="grid.appScope.displayRow(row.entity)">'}
 ],
 useExternalPagination: true,

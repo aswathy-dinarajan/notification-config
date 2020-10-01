@@ -10,6 +10,7 @@ Subject
 Email id
 
 There will be an ajax call to save/retrieve these information where the URL will be retrieved from AWS parameter source
+This can be run as docker container
 Technologies used: angularjs,bootstrap, AJAX,aws sdk
 
 

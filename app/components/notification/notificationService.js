@@ -29,4 +29,6 @@ app.factory('notificationService', function($http) {
 	}
 	function newfunction(){
 	}
+	function newfunction2(){
+		
 });
